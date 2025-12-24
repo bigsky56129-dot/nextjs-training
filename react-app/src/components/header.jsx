@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
+import './header.css'
 
 export default function Header() {
   return (
@@ -11,8 +12,12 @@ export default function Header() {
         <nav id="main-nav-wrap">
           <ul className="main-navigation sf-menu">
             <li><NavLink to="/">Home</NavLink></li>
-            <li className="has-children">
-              <a href="#0" title="">Blog</a>
+            <li
+              className="has-children"
+              onMouseEnter={(e) => e.currentTarget.classList.add('sfHover')}
+              onMouseLeave={(e) => e.currentTarget.classList.remove('sfHover')}
+            >
+              <NavLink to="/single-standard" title="">Blog</NavLink>
               <ul className="sub-menu">
                 <li><NavLink to="/single-standard">Standard</NavLink></li>
                 <li><NavLink to="/single/video">Video</NavLink></li>
