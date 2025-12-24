@@ -1,6 +1,15 @@
+import { useSearchParams } from 'react-router-dom'
+
 export default function Home() {
   const BASE = import.meta.env.BASE_URL
-  const stop = (e) => e.preventDefault()
+  const [searchParams, setSearchParams] = useSearchParams()
+  const page = Number(searchParams.get('page') || 1)
+  const totalPages = 9
+  const go = (n) => {
+    if (n < 1 || n > totalPages) return
+    if (n === 1) setSearchParams({})
+    else setSearchParams({ page: String(n) })
+  }
   return (
     <section id="bricks">
       <div className="row masonry">
@@ -344,17 +353,15 @@ export default function Home() {
 
       <div className="row">
         <nav className="pagination">
-          <span className="page-numbers prev inactive">Prev</span>
-          <span className="page-numbers current">1</span>
-          <a href="#!" onClick={stop} className="page-numbers">2</a>
-          <a href="#!" onClick={stop} className="page-numbers">3</a>
-          <a href="#!" onClick={stop} className="page-numbers">4</a>
-          <a href="#!" onClick={stop} className="page-numbers">5</a>
-          <a href="#!" onClick={stop} className="page-numbers">6</a>
-          <a href="#!" onClick={stop} className="page-numbers">7</a>
-          <a href="#!" onClick={stop} className="page-numbers">8</a>
-          <a href="#!" onClick={stop} className="page-numbers">9</a>
-          <a href="#!" onClick={stop} className="page-numbers next">Next</a>
+          <a href="#!" onClick={(e) => { e.preventDefault(); go(page - 1) }} className={`page-numbers prev ${page === 1 ? 'inactive' : ''}`}>Prev</a>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => (
+            n === page ? (
+              <span key={n} className="page-numbers current">{n}</span>
+            ) : (
+              <a key={n} href="#!" onClick={(e) => { e.preventDefault(); go(n) }} className="page-numbers">{n}</a>
+            )
+          ))}
+          <a href="#!" onClick={(e) => { e.preventDefault(); go(page + 1) }} className="page-numbers next">Next</a>
         </nav>
       </div>
     </section>
