@@ -24,7 +24,7 @@ export default function App() {
         <Route path="/single/audio" element={<SingleAudio />} />
         <Route path="/single/gallery" element={<SingleGallery />} />
         <Route path="/single/video" element={<SingleVideo />} />
-        <Route path="/single/standard" element={<SingleStandard />} />
+        <Route path="/single-standard" element={<SingleStandard />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

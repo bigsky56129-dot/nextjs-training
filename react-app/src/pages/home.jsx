@@ -70,8 +70,8 @@ export default function Home() {
                           <li>September 06, 2016</li>
                           <li><a href="#0">Naruto Uzumaki</a></li>
                         </ul>
-                        <h1 className="slide-title">
-                          <a href="#/single/standard" title="">Minimalism Never Goes Out of Style</a>
+                          <h1 className="slide-title">
+                            <a href="#/single-standard" title="">Minimalism Never Goes Out of Style</a>
                         </h1>
                       </div>
                     </div>
@@ -88,8 +88,8 @@ export default function Home() {
                           <li>August 29, 2016</li>
                           <li><a href="#0">Sasuke Uchiha</a></li>
                         </ul>
-                        <h1 className="slide-title">
-                          <a href="#/single/standard" title="">Enhancing Your Designs with Negative Space</a>
+                          <h1 className="slide-title">
+                            <a href="#/single-standard" title="">Enhancing Your Designs with Negative Space</a>
                         </h1>
                       </div>
                     </div>
@@ -106,8 +106,8 @@ export default function Home() {
                           <li>August 27, 2016</li>
                           <li><a href="#0" className="author">Naruto Uzumaki</a></li>
                         </ul>
-                        <h1 className="slide-title">
-                          <a href="#/single/standard" title="">Music Album Cover Designs for Inspiration</a>
+                          <h1 className="slide-title">
+                            <a href="#/single-standard" title="">Music Album Cover Designs for Inspiration</a>
                         </h1>
                       </div>
                     </div>
@@ -120,7 +120,7 @@ export default function Home() {
           {/* Standard post */}
           <article className="brick entry format-standard animate-this">
             <div className="entry-thumb">
-              <a href="#/single/standard" className="thumb-link">
+                        <a href="#/single-standard" className="thumb-link">
                 <img src={`${BASE}images/thumbs/diagonal-building.jpg`} alt="building" />
               </a>
             </div>
@@ -143,7 +143,7 @@ export default function Home() {
           {/* Another standard */}
           <article className="brick entry format-standard animate-this">
             <div className="entry-thumb">
-              <a href="#/single/standard" className="thumb-link">
+                        <a href="#/single-standard" className="thumb-link">
                 <img src={`${BASE}images/thumbs/ferris-wheel.jpg`} alt="ferris wheel" />
               </a>
             </div>
@@ -204,7 +204,7 @@ export default function Home() {
           {/* Standard */}
           <article className="brick entry animate-this">
             <div className="entry-thumb">
-              <a href="#/single/standard" className="thumb-link">
+                        <a href="#/single-standard" className="thumb-link">
                 <img src={`${BASE}images/thumbs/shutterbug.jpg`} alt="Shutterbug" />
               </a>
             </div>
@@ -227,7 +227,7 @@ export default function Home() {
           {/* Another standard */}
           <article className="brick entry animate-this">
             <div className="entry-thumb">
-              <a href="#/single/standard" className="thumb-link">
+                        <a href="#/single-standard" className="thumb-link">
                 <img src={`${BASE}images/thumbs/usaf-rocket.jpg`} alt="USAF rocket" />
               </a>
             </div>

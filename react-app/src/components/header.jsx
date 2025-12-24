@@ -14,7 +14,7 @@ export default function Header() {
             <li className="has-children">
               <a href="#0" title="">Blog</a>
               <ul className="sub-menu">
-                <li><NavLink to="/single/standard">Standard</NavLink></li>
+                <li><NavLink to="/single-standard">Standard</NavLink></li>
                 <li><NavLink to="/single/video">Video</NavLink></li>
                 <li><NavLink to="/single/audio">Audio</NavLink></li>
                 <li><NavLink to="/single/gallery">Gallery</NavLink></li>
