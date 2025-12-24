@@ -9,7 +9,9 @@
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -b gh-pages",
+    "deploy:clean": "gh-pages-clean",
+    "deploy:repo": "gh-pages -d dist -b gh-pages -r https://github.com/bigsky56129-dot/nextjs-training.git"
   },
   "dependencies": {
     "react": "^18.3.1",

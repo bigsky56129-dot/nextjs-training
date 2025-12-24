@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
-// Update base if your repo name changes
-const base = '/nextjs-training/'
+// Use relative base to work reliably under GitHub Pages subpaths
+const base = './'
 
 export default defineConfig({
   base,
