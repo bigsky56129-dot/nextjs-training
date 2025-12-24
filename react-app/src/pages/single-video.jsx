@@ -6,7 +6,18 @@ export default function SingleVideo() {
           <article>
             <div className="content-media">
               <div className="post-thumb">
-                <img src={`${import.meta.env.BASE_URL}images/thumbs/featured/featured-3.jpg`} alt="Video" />
+                <div className="fluid-video-wrapper">
+                  <iframe
+                    src="https://player.vimeo.com/video/1084537?title=0&byline=0&portrait=0"
+                    width="640"
+                    height="360"
+                    frameBorder="0"
+                    webkitAllowFullScreen
+                    mozAllowFullScreen
+                    allowFullScreen
+                    title="Embedded Video"
+                  ></iframe>
+                </div>
               </div>
             </div>
 
@@ -34,7 +45,7 @@ export default function SingleVideo() {
               </div>
 
               <div className="pagenav group">
-                <div className="prev"><a href="#/single/standard"><span>Previous</span> Standard Format Post</a></div>
+                <div className="prev"><a href="#/single-standard"><span>Previous</span> Standard Format Post</a></div>
                 <div className="next"><a href="#/single/audio"><span>Next</span> Audio Format Post</a></div>
               </div>
             </div>

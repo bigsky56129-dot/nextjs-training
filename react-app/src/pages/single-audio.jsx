@@ -5,10 +5,14 @@ export default function SingleAudio() {
         <div className="col-twelve">
           <article>
             <div className="content-media">
-              <audio controls style={{ width: '100%' }}>
-                <source src={`${import.meta.env.BASE_URL}media/sample.mp3`} type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
+              <div className="post-thumb">
+                <div className="audio-wrap">
+                  <audio controls style={{ width: '100%' }}>
+                    <source src={`${import.meta.env.BASE_URL}media/sample.mp3`} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
             </div>
 
             <div className="entry-primary">
@@ -20,6 +24,7 @@ export default function SingleAudio() {
 
               <div className="entry-content">
                 <p>Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas molestias.</p>
+                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
                 <ul>
                   <li>Donec nulla non metus auctor fringilla.</li>
                   <li>Praesent commodo cursus magna, vel scelerisque nisl.</li>

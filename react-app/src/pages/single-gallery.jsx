@@ -1,4 +1,38 @@
+import { useEffect } from 'react'
+
 export default function SingleGallery() {
+  useEffect(() => {
+    const $ = window.jQuery
+    if (!$) return
+    const $postSliders = $('.post-slider')
+    if ($postSliders.length && typeof $postSliders.flexslider === 'function') {
+      $postSliders.each(function () {
+        const $ps = $(this)
+        if ($ps.data('flexslider')) return
+        $ps.flexslider({
+          namespace: 'flex-',
+          controlsContainer: '',
+          animation: 'fade',
+          controlNav: true,
+          directionNav: false,
+          smoothHeight: false,
+          slideshowSpeed: 7000,
+          animationSpeed: 600,
+          randomize: false,
+          touch: true,
+          start: function (slider) {
+            if (typeof slider.container === 'object') {
+              slider.container.on('click', function () {
+                if (!slider.animating) {
+                  slider.flexAnimate(slider.getTarget('next'))
+                }
+              })
+            }
+          },
+        })
+      })
+    }
+  }, [])
   return (
     <section id="content-wrap" className="blog-single">
       <div className="row">
@@ -6,7 +40,19 @@ export default function SingleGallery() {
           <article>
             <div className="content-media">
               <div className="post-thumb">
-                <img src={`${import.meta.env.BASE_URL}images/thumbs/gallery/work1.jpg`} alt="Gallery" />
+                <div className="post-slider flexslider">
+                  <ul className="slides">
+                    <li>
+                      <img src={`${import.meta.env.BASE_URL}images/thumbs/single/gallery/single-gallery-01.jpg`} alt="Gallery 1" />
+                    </li>
+                    <li>
+                      <img src={`${import.meta.env.BASE_URL}images/thumbs/single/gallery/single-gallery-02.jpg`} alt="Gallery 2" />
+                    </li>
+                    <li>
+                      <img src={`${import.meta.env.BASE_URL}images/thumbs/single/gallery/single-gallery-03.jpg`} alt="Gallery 3" />
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -19,13 +65,7 @@ export default function SingleGallery() {
 
               <div className="entry-content">
                 <p>Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas molestias.</p>
-                <div className="row">
-                  <div className="col-six tab-full"><img src={`${import.meta.env.BASE_URL}images/thumbs/single/gallery/single-gallery-01.jpg`} alt="Gallery 1" /></div>
-                  <div className="col-six tab-full"><img src={`${import.meta.env.BASE_URL}images/thumbs/single/gallery/single-gallery-02.jpg`} alt="Gallery 2" /></div>
-                </div>
-                <div className="row">
-                  <div className="col-six tab-full"><img src={`${import.meta.env.BASE_URL}images/thumbs/single/gallery/single-gallery-03.jpg`} alt="Gallery 3" /></div>
-                </div>
+                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
               </div>
 
               <p className="tags">
@@ -41,7 +81,7 @@ export default function SingleGallery() {
 
               <div className="pagenav group">
                 <div className="prev"><a href="#/single/audio"><span>Previous</span> Audio Format Post</a></div>
-                <div className="next"><a href="#/single/standard"><span>Next</span> Standard Format Post</a></div>
+                <div className="next"><a href="#/single-standard"><span>Next</span> Standard Format Post</a></div>
               </div>
             </div>
           </article>
