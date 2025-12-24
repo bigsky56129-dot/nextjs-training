@@ -1,4 +1,12 @@
+import { useState, useMemo } from 'react'
+
 export default function Contact() {
+  const [zoom, setZoom] = useState(14)
+  const q = '1600+Amphitheatre+Parkway,+Mountain+View,+CA+94043'
+  const mapSrc = useMemo(
+    () => `https://maps.google.com/maps?q=${q}&t=&z=${zoom}&ie=UTF8&iwloc=&output=embed`,
+    [zoom]
+  )
   return (
     <section id="content-wrap" className="site-page">
       <div className="row">
@@ -6,9 +14,33 @@ export default function Contact() {
           <section>
             <div className="content-media">
               <div id="map-wrap">
-                <div id="map-container"></div>
-                <div id="map-zoom-in"></div>
-                <div id="map-zoom-out"></div>
+                <div id="map-container">
+                  <iframe
+                    title="Google Map"
+                    src={mapSrc}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div
+                  id="map-zoom-in"
+                  role="button"
+                  tabIndex={0}
+                  style={{ display: 'block' }}
+                  onClick={() => setZoom((z) => Math.min(20, z + 1))}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setZoom((z) => Math.min(20, z + 1)) }}
+                ></div>
+                <div
+                  id="map-zoom-out"
+                  role="button"
+                  tabIndex={0}
+                  style={{ display: 'block' }}
+                  onClick={() => setZoom((z) => Math.max(3, z - 1))}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setZoom((z) => Math.max(3, z - 1)) }}
+                ></div>
               </div>
             </div>
             <div className="primary-content">
