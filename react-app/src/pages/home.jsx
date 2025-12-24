@@ -23,6 +23,55 @@ export default function Home() {
             resize: true,
           })
         }
+        // Ensure FlexSlider initializes after mount (window load may have passed)
+        try {
+          const $featured = $('#featured-post-slider')
+          if ($featured.length && typeof $featured.flexslider === 'function' && !$featured.data('flexslider')) {
+            $featured.flexslider({
+              namespace: 'flex-',
+              controlsContainer: '',
+              animation: 'fade',
+              controlNav: false,
+              directionNav: true,
+              smoothHeight: false,
+              slideshowSpeed: 7000,
+              animationSpeed: 600,
+              randomize: false,
+              touch: true,
+            })
+          }
+          const $postSliders = $('.post-slider')
+          if ($postSliders.length && typeof $postSliders.flexslider === 'function') {
+            $postSliders.each(function () {
+              const $ps = $(this)
+              if ($ps.data('flexslider')) return
+              $ps.flexslider({
+                namespace: 'flex-',
+                controlsContainer: '',
+                animation: 'fade',
+                controlNav: true,
+                directionNav: false,
+                smoothHeight: false,
+                slideshowSpeed: 7000,
+                animationSpeed: 600,
+                randomize: false,
+                touch: true,
+                start: function (slider) {
+                  if (typeof slider.container === 'object') {
+                    slider.container.on('click', function () {
+                      if (!slider.animating) {
+                        slider.flexAnimate(slider.getTarget('next'))
+                      }
+                    })
+                  }
+                  containerBricks.masonry('layout')
+                },
+              })
+            })
+          }
+        } catch (e) {
+          // ignore flexslider init errors
+        }
         setTimeout(() => {
           $('.animate-this').each(function (ctr) {
             const el = $(this)
