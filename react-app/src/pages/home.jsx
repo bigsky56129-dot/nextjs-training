@@ -1,9 +1,46 @@
 import { useSearchParams } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export default function Home() {
   const BASE = import.meta.env.BASE_URL
   const [searchParams, setSearchParams] = useSearchParams()
   const page = Number(searchParams.get('page') || 1)
+  useEffect(() => {
+    const $ = window.jQuery
+    if (!$) return
+    const containerBricks = $('.bricks-wrapper')
+    if (!containerBricks.length) return
+    const initOrLayout = () => {
+      try {
+        if (containerBricks.data('masonry')) {
+          containerBricks.masonry('reloadItems')
+          containerBricks.masonry('layout')
+        } else {
+          containerBricks.masonry({
+            itemSelector: '.entry',
+            columnWidth: '.grid-sizer',
+            percentPosition: true,
+            resize: true,
+          })
+        }
+        setTimeout(() => {
+          $('.animate-this').each(function (ctr) {
+            const el = $(this)
+            setTimeout(() => {
+              el.addClass('animated fadeInUp')
+            }, ctr * 200)
+          })
+        }, 100)
+      } catch (e) {
+        // no-op: masonry may not be loaded yet
+      }
+    }
+    if (typeof containerBricks.imagesLoaded === 'function') {
+      containerBricks.imagesLoaded(initOrLayout)
+    } else {
+      initOrLayout()
+    }
+  }, [page])
   const totalPages = 9
   const go = (n) => {
     if (n < 1 || n > totalPages) return
