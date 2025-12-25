@@ -3,6 +3,7 @@ import CommentsList from "../../components/CommentsList"
 import CommentForm from "../../components/CommentForm"
 
 export default function Page() {
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ""
   return (
     <section id="content-wrap" className="blog-single">
       <div className="row">
@@ -44,7 +45,7 @@ export default function Page() {
                 aliqua laborum mollit quis nostrud sed sed.
               </p>
               <p>
-                <img src="/images/shutterbug.jpg" alt="" />
+                <img src={`${prefix}/images/shutterbug.jpg`} alt="" />
               </p>
               <h2>Large Heading</h2>
               <p>
@@ -113,7 +114,7 @@ export default function Page() {
                 <a href="#0">turpis</a>
               </p>
               <div className="author-profile">
-                <img src="/images/avatars/user-05.jpg" alt="" />
+                <img src={`${prefix}/images/avatars/user-05.jpg`} alt="" />
                 <div className="about">
                   <h4>
                     <a href="#0">Jonathan Smith</a>
@@ -143,13 +144,13 @@ export default function Page() {
 
             <div className="pagenav group">
               <div className="prev-nav">
-                <Link href="/single-standard" rel="prev">
+                <Link href="/single-standard/" rel="prev">
                   <span>Previous</span>
                   Tips on Minimalist Design
                 </Link>
               </div>
               <div className="next-nav">
-                <Link href="/single-audio" rel="next">
+                <Link href="/single-audio/" rel="next">
                   <span>Next</span>
                   Less Is More
                 </Link>

@@ -2,6 +2,7 @@
 import { useEffect } from "react"
 
 export default function SingleAudioPage() {
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ""
   useEffect(() => {
     const el = document.getElementById("player2")
     if (!el) return
@@ -23,10 +24,10 @@ export default function SingleAudioPage() {
           <article className="format-audio">
             <div className="content-media">
               <div className="post-thumb">
-                <img src="/images/thumbs/single/single-02.jpg" alt="Concert" />
+                <img src={`${prefix}/images/thumbs/single/single-02.jpg`} alt="Concert" />
               </div>
               <div className="audio-wrap">
-                <audio id="player2" src="/media/AirReview-Landmarks-02-ChasingCorporate.mp3" width="100%" height="42" controls></audio>
+                <audio id="player2" src={`${prefix}/media/AirReview-Landmarks-02-ChasingCorporate.mp3`} width="100%" height="42" controls></audio>
               </div>
             </div>
             <div className="primary-content">

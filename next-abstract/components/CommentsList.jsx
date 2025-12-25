@@ -1,4 +1,5 @@
 export default function CommentsList() {
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ""
   return (
     <div className="comments-wrap">
       <div id="comments" className="row">
@@ -7,7 +8,7 @@ export default function CommentsList() {
           <ol className="commentlist">
             <li className="depth-1">
               <div className="avatar">
-                <img width="50" height="50" className="avatar" src="/images/avatars/user-01.jpg" alt="" />
+                <img width="50" height="50" className="avatar" src={`${prefix}/images/avatars/user-01.jpg`} alt="" />
               </div>
               <div className="comment-content">
                 <div className="comment-info">
@@ -28,7 +29,7 @@ export default function CommentsList() {
             </li>
             <li className="thread-alt depth-1">
               <div className="avatar">
-                <img width="50" height="50" className="avatar" src="/images/avatars/user-04.jpg" alt="" />
+                <img width="50" height="50" className="avatar" src={`${prefix}/images/avatars/user-04.jpg`} alt="" />
               </div>
               <div className="comment-content">
                 <div className="comment-info">
@@ -48,7 +49,7 @@ export default function CommentsList() {
               <ul className="children">
                 <li className="depth-2">
                   <div className="avatar">
-                    <img width="50" height="50" className="avatar" src="/images/avatars/user-03.jpg" alt="" />
+                    <img width="50" height="50" className="avatar" src={`${prefix}/images/avatars/user-03.jpg`} alt="" />
                   </div>
                   <div className="comment-content">
                     <div className="comment-info">
@@ -68,7 +69,7 @@ export default function CommentsList() {
             </li>
             <li className="depth-1">
               <div className="avatar">
-                <img width="50" height="50" className="avatar" src="/images/avatars/user-02.jpg" alt="" />
+                <img width="50" height="50" className="avatar" src={`${prefix}/images/avatars/user-02.jpg`} alt="" />
               </div>
               <div className="comment-content">
                 <div className="comment-info">
