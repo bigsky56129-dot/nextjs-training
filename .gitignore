@@ -20,6 +20,15 @@ react-app/.vite/
 react-app/.cache/
 react-app/.eslintcache
 
+# next-abstract (Next.js) generated files
+next-abstract/.next/
+next-abstract/node_modules/
+next-abstract/out/
+next-abstract/.vercel/
+next-abstract/.eslintcache
+next-abstract/.turbo/
+next-abstract/.cache/
+
 # misc
 .DS_Store
 .env.local

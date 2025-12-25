@@ -1,0 +1,2 @@
+/* Global resets or Next-specific overrides can live here */
+html, body { height: 100%; }
