@@ -1,5 +1,5 @@
 1:HL["/nextjs-training/_next/static/css/89025edb5b119489.css","style",{"crossOrigin":""}]
-0:["KI8_7WRhiFq03nkgAH9j2",[[["",{"children":["single-video",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/nextjs-training/_next/static/css/89025edb5b119489.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+0:["fWhSShTPYhRPppVdGClvY",[[["",{"children":["single-video",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/nextjs-training/_next/static/css/89025edb5b119489.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
 4:I[3994,["326","static/chunks/326-57365370d83786a6.js","185","static/chunks/app/layout-49fa1481ee42f38a.js"],""]
 5:I[8326,["326","static/chunks/326-57365370d83786a6.js","989","static/chunks/app/single-video/page-9589cc7b502bdbe4.js"],""]
 6:I[6954,[],""]
