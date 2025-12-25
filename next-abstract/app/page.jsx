@@ -1,7 +1,48 @@
+"use client"
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function Page() {
   const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ""
+  useEffect(() => {
+    try {
+      const $ = window.jQuery
+      // Initialize featured slider
+      if ($ && $.fn && $.fn.flexslider) {
+        $('#featured-post-slider').flexslider({
+          animation: 'slide',
+          controlNav: false,
+          directionNav: true,
+          slideshow: true,
+        })
+      }
+
+      // Initialize masonry after images load
+      const gridSelector = '.bricks-wrapper'
+      if ($ && $.fn && $.fn.masonry && $.fn.imagesLoaded) {
+        const $grid = $(gridSelector)
+        if ($grid.length) {
+          $grid.imagesLoaded(() => {
+            $grid.masonry({
+              itemSelector: '.brick',
+              columnWidth: '.grid-sizer',
+              percentPosition: true,
+            })
+          })
+        }
+      }
+
+      // Initialize homepage audio player if present
+      const audioEl = document.getElementById('player')
+      if (audioEl && window.MediaElementPlayer && !audioEl.closest('.mejs-container')) {
+        new window.MediaElementPlayer(audioEl, {
+          features: ['playpause', 'progress', 'current', 'duration', 'volume'],
+          audioWidth: '100%',
+          audioHeight: 42,
+        })
+      }
+    } catch {}
+  }, [])
   return (
     <section id="bricks">
       <div className="row masonry">
