@@ -1,5 +1,5 @@
 1:HL["/nextjs-training/_next/static/css/89025edb5b119489.css","style",{"crossOrigin":""}]
-0:["WDoBwPN_r9akUzRKV5nP7",[[["",{"children":["single-video",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/nextjs-training/_next/static/css/89025edb5b119489.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+0:["e9PmsH3pBJaKKACNrSiRt",[[["",{"children":["single-video",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/nextjs-training/_next/static/css/89025edb5b119489.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
 4:I[3994,["326","static/chunks/326-bb2beefb4d774e7d.js","185","static/chunks/app/layout-dd85a605ab14d446.js"],""]
 5:I[8326,["326","static/chunks/326-bb2beefb4d774e7d.js","989","static/chunks/app/single-video/page-9589cc7b502bdbe4.js"],""]
 6:I[6954,[],""]
