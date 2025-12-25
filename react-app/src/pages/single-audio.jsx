@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import CommentsList from '../components/comments-list'
+import CommentForm from '../components/comment-form'
 
 export default function SingleAudio() {
   useEffect(() => {
@@ -108,6 +110,14 @@ export default function SingleAudio() {
               </div>
             </div>
           </article>
+        </div>
+      </div>
+      <div className="comments-wrap">
+        <div id="comments" className="row">
+          <div className="col-full">
+            <CommentsList />
+            <CommentForm />
+          </div>
         </div>
       </div>
     </section>
