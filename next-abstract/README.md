@@ -56,11 +56,22 @@ Run before deploy to catch root-leading paths:
 Push-Location "./next-abstract"; npm run test:paths; Pop-Location
 ```
 
+
+## Authentication & Admin Features
+
+- **Login/Logout:** Modern login page at `/login` authenticates via DummyJSON API. Auth state is persisted in context and localStorage.
+- **Protected Route:** `/admin/clients` is accessible only to logged-in users. Guests are redirected to `/login`.
+- **Logout:** Clicking "Logout" clears auth state and returns to the login page.
+- **Dynamic Header:** On `/admin/clients`, only "Home" and "Logout" are shown in the header; all other nav/search/menu items are hidden.
+
 ## Project Structure
 For a detailed breakdown of the source code and folder organization, see [`ARCHITECTURE.md`](./ARCHITECTURE.md).
 
-- `app/`: Next.js App Router pages (`layout.jsx`, route folders).
-- `components/`: Header, Footer, Comments and forms.
+- `app/`: Next.js App Router pages (`layout.jsx`, route folders, login, admin/clients).
+- `components/`: Header (dynamic nav), Footer, Comments and forms.
+- `contexts/`: Global authentication context.
+- `hooks/`: Custom hooks (e.g., `use-auth`).
+- `services/`: API logic (e.g., DummyJSON user fetch).
 - `public/`: Legacy CSS/JS, fonts, images, media; shipped as-is.
 - `scripts/`: `check-base-paths.mjs` guard test.
 
@@ -70,3 +81,20 @@ For a detailed breakdown of the source code and folder organization, see [`ARCHI
 
 ## License
 Proprietary or theme-derivative; consult repository owner for licensing details.
+
+# User API data
+https://dummyjson.com/users
+
+## Test Users
+
+You can use these test accounts to login and test different user roles:
+
+### Admin User (Officer Role)
+- **Username:** `michaelw`
+- **Email:** `michael.williams@x.dummyjson.com`
+- **Password:** `michaelwpass`
+
+### Moderator User (Officer Role)
+- **Username:** `oliviaw`
+- **Email:** `olivia.wilson@x.dummyjson.com`
+- **Password:** `oliviawpass`

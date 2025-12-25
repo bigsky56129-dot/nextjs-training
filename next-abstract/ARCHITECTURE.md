@@ -12,14 +12,30 @@ This document summarizes the structure and key decisions of the Next Abstract si
 - Legacy front-end assets (CSS/JS) loaded globally in `app/layout.jsx`.
 - Client-side initializers added to specific pages to re-enable theme plugins.
 
+
+## Authentication & Admin Features
+
+- **Login/Logout:** `/login` page authenticates via DummyJSON API, stores user in context/localStorage.
+- **Protected Route:** `/admin/clients` is client-only, protected by auth context; redirects guests to `/login`.
+- **Logout:** Clears auth and redirects to login.
+
 ## Directory Layout
 - `app/`
-  - `layout.jsx`: Global head, CSS/JS includes, header/footer.
+  - `layout.jsx`: Global head, CSS/JS includes, header/footer, wraps with AuthProvider.
   - `page.jsx`: Home with Masonry grid, featured slider, audio init.
+  - `login/page.jsx`: Login form, redirects to `/admin/clients` on success.
+  - `admin/clients/page.jsx`: Protected client list, DummyJSON data, only for logged-in users.
   - `(routes)/*`: Route folders (about, contact, category, single-* , style-guide, faq, terms, privacy).
 - `components/`
-  - `Header.jsx`, `Footer.jsx`: Site chrome with Next `Link` routing.
+  - `Header.jsx`: Dynamic nav, minimal on `/admin/clients`.
+  - `Footer.jsx`: (removed if not needed).
   - `CommentsList.jsx`, `CommentForm.jsx`: Comments UI for single pages.
+- `contexts/`
+  - `auth-context.js`: Global authentication context.
+- `hooks/`
+  - `use-auth.js`: Custom hook for auth state.
+- `services/`
+  - `user-service.js`: DummyJSON API fetch logic.
 - `public/`
   - `css/`, `js/`, `fonts/`, `images/`, `media/`: Legacy assets preserved verbatim.
   - `.nojekyll`: Ensures GitHub Pages serves directories beginning with underscores.
