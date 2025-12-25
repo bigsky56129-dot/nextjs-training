@@ -1,22 +1,36 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import { fetchUsers } from "../../services/user-service";
-import "../../clients.css";
+import { useRouter } from "next/navigation";
+import { useAuth } from "../../../hooks/use-auth";
+import { fetchUsers } from "../../../services/user-service";
+import "../../../clients.css";
+
 
 export default function ClientsPage() {
+  const { user } = useAuth();
+  const router = useRouter();
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
+    if (!mounted) return;
+    if (!user) {
+      router.replace("/login");
+      return;
+    }
     fetchUsers()
       .then((users) => {
         setUsers(users);
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, []);
+  }, [user, router, mounted]);
+
+  if (!mounted || !user) return null;
 
   const filtered = users.filter(
     (u) =>

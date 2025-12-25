@@ -25,7 +25,6 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <Header />
           {children}
-          <Footer />
         </AuthProvider>
         <Script src={`${prefix}/js/jquery-2.1.3.min.js`} strategy="beforeInteractive" />
         <Script src={`${prefix}/js/plugins.js`} strategy="afterInteractive" />
