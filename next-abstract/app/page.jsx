@@ -22,7 +22,7 @@ export default function Page() {
                         <ul className="entry-meta">
                           <li>September 06, 2016</li>
                           <li>
-                            <a href="#">Naruto Uzumaki</a>
+                            <Link href="/about/">Naruto Uzumaki</Link>
                           </li>
                         </ul>
                         <h1 className="slide-title">
@@ -44,7 +44,7 @@ export default function Page() {
                         <ul className="entry-meta">
                           <li>August 29, 2016</li>
                           <li>
-                            <a href="#">Sasuke Uchiha</a>
+                            <Link href="/about/">Sasuke Uchiha</Link>
                           </li>
                         </ul>
                         <h1 className="slide-title">
@@ -66,9 +66,9 @@ export default function Page() {
                         <ul className="entry-meta">
                           <li>August 27, 2016</li>
                           <li>
-                            <a href="#" className="author">
+                            <Link href="/about/" className="author">
                               Naruto Uzumaki
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                         <h1 className="slide-title">
@@ -94,8 +94,8 @@ export default function Page() {
               <div className="entry-header">
                 <div className="entry-meta">
                   <span className="cat-links">
-                    <a href="#">Design</a>
-                    <a href="#">Photography</a>
+                    <Link href="/category/">Design</Link>
+                    <Link href="/category/">Photography</Link>
                   </span>
                 </div>
                 <h1 className="entry-title">
@@ -118,8 +118,8 @@ export default function Page() {
               <div className="entry-header">
                 <div className="entry-meta">
                   <span className="cat-links">
-                    <a href="#">Design</a>
-                    <a href="#">UI</a>
+                    <Link href="/category/">Design</Link>
+                    <Link href="/category/">UI</Link>
                   </span>
                 </div>
                 <h1 className="entry-title">
@@ -151,8 +151,8 @@ export default function Page() {
               <div className="entry-header">
                 <div className="entry-meta">
                   <span className="cat-links">
-                    <a href="#">Design</a>
-                    <a href="#">Music</a>
+                    <Link href="/category/">Design</Link>
+                    <Link href="/category/">Music</Link>
                   </span>
                 </div>
                 <h1 className="entry-title">
@@ -186,8 +186,8 @@ export default function Page() {
               <div className="entry-header">
                 <div className="entry-meta">
                   <span className="cat-links">
-                    <a href="#">Photography</a>
-                    <a href="#">html</a>
+                    <Link href="/category/">Photography</Link>
+                    <Link href="/category/">html</Link>
                   </span>
                 </div>
                 <h1 className="entry-title">
@@ -210,8 +210,8 @@ export default function Page() {
               <div className="entry-header">
                 <div className="entry-meta">
                   <span className="cat-links">
-                    <a href="#">Branding</a>
-                    <a href="#">Mockup</a>
+                    <Link href="/category/">Branding</Link>
+                    <Link href="/category/">Mockup</Link>
                   </span>
                 </div>
                 <h1 className="entry-title">
@@ -244,8 +244,8 @@ export default function Page() {
               <div className="entry-header">
                 <div className="entry-meta">
                   <span className="cat-links">
-                    <a href="#">Branding</a>
-                    <a href="#">Wordpress</a>
+                    <Link href="/category/">Branding</Link>
+                    <Link href="/category/">Wordpress</Link>
                   </span>
                 </div>
                 <h1 className="entry-title">
@@ -310,8 +310,8 @@ export default function Page() {
               <div className="entry-header">
                 <div className="entry-meta">
                   <span className="cat-links">
-                    <a href="#">Design</a>
-                    <a href="#">Branding</a>
+                    <Link href="/category/">Design</Link>
+                    <Link href="/category/">Branding</Link>
                   </span>
                 </div>
                 <h1 className="entry-title">
@@ -334,8 +334,8 @@ export default function Page() {
               <div className="entry-header">
                 <div className="entry-meta">
                   <span className="cat-links">
-                    <a href="#">Photography</a>
-                    <a href="#">Design</a>
+                    <Link href="/category/">Photography</Link>
+                    <Link href="/category/">Design</Link>
                   </span>
                 </div>
                 <h1 className="entry-title">
@@ -358,8 +358,8 @@ export default function Page() {
               <div className="entry-header">
                 <div className="entry-meta">
                   <span className="cat-links">
-                    <a href="#">Branding</a>
-                    <a href="#">html</a>
+                    <Link href="/category/">Branding</Link>
+                    <Link href="/category/">html</Link>
                   </span>
                 </div>
                 <h1 className="entry-title">
@@ -378,15 +378,15 @@ export default function Page() {
         <nav className="pagination">
           <span className="page-numbers prev inactive">Prev</span>
           <span className="page-numbers current">1</span>
-          <a href="#" className="page-numbers">2</a>
-          <a href="#" className="page-numbers">3</a>
-          <a href="#" className="page-numbers">4</a>
-          <a href="#" className="page-numbers">5</a>
-          <a href="#" className="page-numbers">6</a>
-          <a href="#" className="page-numbers">7</a>
-          <a href="#" className="page-numbers">8</a>
-          <a href="#" className="page-numbers">9</a>
-          <a href="#" className="page-numbers next">Next</a>
+          <span className="page-numbers">2</span>
+          <span className="page-numbers">3</span>
+          <span className="page-numbers">4</span>
+          <span className="page-numbers">5</span>
+          <span className="page-numbers">6</span>
+          <span className="page-numbers">7</span>
+          <span className="page-numbers">8</span>
+          <span className="page-numbers">9</span>
+          <span className="page-numbers next inactive">Next</span>
         </nav>
       </div>
     </section>
