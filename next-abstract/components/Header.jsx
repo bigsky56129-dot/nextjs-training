@@ -43,6 +43,9 @@ export default function Header() {
             <li>
               <Link href="/contact/" title="">Contact</Link>
             </li>
+            <li>
+              <Link href="/login" title="">Login</Link>
+            </li>
           </ul>
         </nav>
         <div className="search-wrap">

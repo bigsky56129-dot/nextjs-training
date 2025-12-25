@@ -2,6 +2,7 @@ import "./globals.css"
 import Script from "next/script"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import { AuthProvider } from "../contexts/auth-context"
 
 export const metadata = {
   title: "Abstract Next",
@@ -21,9 +22,11 @@ export default function RootLayout({ children }) {
         <Script src={`${prefix}/js/pace.min.js`} strategy="beforeInteractive" />
       </head>
       <body id="top">
-        <Header />
-        {children}
-        <Footer />
+        <AuthProvider>
+          <Header />
+          {children}
+          <Footer />
+        </AuthProvider>
         <Script src={`${prefix}/js/jquery-2.1.3.min.js`} strategy="beforeInteractive" />
         <Script src={`${prefix}/js/plugins.js`} strategy="afterInteractive" />
         <Script src={`${prefix}/js/jquery.appear.js`} strategy="afterInteractive" />
