@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 export default function Page() {
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ""
   return (
     <section id="bricks">
       <div className="row masonry">
@@ -15,7 +16,7 @@ export default function Page() {
                     <div className="featured-post-slide">
                       <div
                         className="post-background"
-                        style={{ backgroundImage: "url('/images/thumbs/featured/featured-1.jpg')" }}
+                        style={{ backgroundImage: `url('${prefix}/images/thumbs/featured/featured-1.jpg')` }}
                       ></div>
                       <div className="overlay"></div>
                       <div className="post-content">
@@ -37,7 +38,7 @@ export default function Page() {
                     <div className="featured-post-slide">
                       <div
                         className="post-background"
-                        style={{ backgroundImage: "url('/images/thumbs/featured/featured-2.jpg')" }}
+                        style={{ backgroundImage: `url('${prefix}/images/thumbs/featured/featured-2.jpg')` }}
                       ></div>
                       <div className="overlay"></div>
                       <div className="post-content">
@@ -59,7 +60,7 @@ export default function Page() {
                     <div className="featured-post-slide">
                       <div
                         className="post-background"
-                        style={{ backgroundImage: "url('/images/thumbs/featured/featured-3.jpg')" }}
+                        style={{ backgroundImage: `url('${prefix}/images/thumbs/featured/featured-3.jpg')` }}
                       ></div>
                       <div className="overlay"></div>
                       <div className="post-content">
@@ -87,7 +88,7 @@ export default function Page() {
           <article className="brick entry format-standard animate-this">
             <div className="entry-thumb">
               <Link href="/single-standard/" className="thumb-link">
-                <img src="/images/thumbs/diagonal-building.jpg" alt="building" />
+                <img src={`${prefix}/images/thumbs/diagonal-building.jpg`} alt="building" />
               </Link>
             </div>
             <div className="entry-text">
@@ -111,7 +112,7 @@ export default function Page() {
           <article className="brick entry format-standard animate-this">
             <div className="entry-thumb">
               <Link href="/single-standard/" className="thumb-link">
-                <img src="/images/thumbs/ferris-wheel.jpg" alt="ferris wheel" />
+                <img src={`${prefix}/images/thumbs/ferris-wheel.jpg`} alt="ferris wheel" />
               </Link>
             </div>
             <div className="entry-text">
@@ -135,12 +136,12 @@ export default function Page() {
           <article className="brick entry format-audio animate-this">
             <div className="entry-thumb">
               <Link href="/single-audio/" className="thumb-link">
-                <img src="/images/thumbs/concert.jpg" alt="concert" />
+                <img src={`${prefix}/images/thumbs/concert.jpg`} alt="concert" />
               </Link>
               <div className="audio-wrap">
                 <audio
                   id="player"
-                  src="/media/AirReview-Landmarks-02-ChasingCorporate.mp3"
+                  src={`${prefix}/media/AirReview-Landmarks-02-ChasingCorporate.mp3`}
                   width="100%"
                   height="42"
                   controls="controls"
@@ -179,7 +180,7 @@ export default function Page() {
           <article className="brick entry animate-this">
             <div className="entry-thumb">
               <Link href="/single-standard/" className="thumb-link">
-                <img src="/images/thumbs/shutterbug.jpg" alt="Shutterbug" />
+                <img src={`${prefix}/images/thumbs/shutterbug.jpg`} alt="Shutterbug" />
               </Link>
             </div>
             <div className="entry-text">
@@ -203,7 +204,7 @@ export default function Page() {
           <article className="brick entry animate-this">
             <div className="entry-thumb">
               <Link href="/single-standard/" className="thumb-link">
-                <img src="/images/thumbs/usaf-rocket.jpg" alt="USAF rocket" />
+                <img src={`${prefix}/images/thumbs/usaf-rocket.jpg`} alt="USAF rocket" />
               </Link>
             </div>
             <div className="entry-text">
@@ -229,13 +230,13 @@ export default function Page() {
               <div className="post-slider flexslider">
                 <ul className="slides">
                   <li>
-                    <img src="/images/thumbs/gallery/work1.jpg" alt="work1" />
+                    <img src={`${prefix}/images/thumbs/gallery/work1.jpg`} alt="work1" />
                   </li>
                   <li>
-                    <img src="/images/thumbs/gallery/work2.jpg" alt="work2" />
+                    <img src={`${prefix}/images/thumbs/gallery/work2.jpg`} alt="work2" />
                   </li>
                   <li>
-                    <img src="/images/thumbs/gallery/work3.jpg" alt="work3" />
+                    <img src={`${prefix}/images/thumbs/gallery/work3.jpg`} alt="work3" />
                   </li>
                 </ul>
               </div>
@@ -276,7 +277,7 @@ export default function Page() {
           <article className="brick entry animate-this">
             <div className="entry-thumb">
               <Link href="/single-standard/" className="thumb-link">
-                <img src="/images/thumbs/diagonal-pattern.jpg" alt="Pattern" />
+                <img src={`${prefix}/images/thumbs/diagonal-pattern.jpg`} alt="Pattern" />
               </Link>
             </div>
             <div className="entry-text">
@@ -303,7 +304,7 @@ export default function Page() {
                 href="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39"
                 data-lity
               >
-                <img src="/images/thumbs/ottawa-bokeh.jpg" alt="bokeh" />
+                <img src={`${prefix}/images/thumbs/ottawa-bokeh.jpg`} alt="bokeh" />
               </a>
             </div>
             <div className="entry-text">
@@ -327,7 +328,7 @@ export default function Page() {
           <article className="brick entry animate-this">
             <div className="entry-thumb">
               <Link href="/single-standard/" className="thumb-link">
-                <img src="/images/thumbs/lighthouse.jpg" alt="Lighthouse" />
+                <img src={`${prefix}/images/thumbs/lighthouse.jpg`} alt="Lighthouse" />
               </Link>
             </div>
             <div className="entry-text">
@@ -351,7 +352,7 @@ export default function Page() {
           <article className="brick entry animate-this">
             <div className="entry-thumb">
               <Link href="/single-standard/" className="thumb-link">
-                <img src="/images/thumbs/liberty.jpg" alt="Liberty" />
+                <img src={`${prefix}/images/thumbs/liberty.jpg`} alt="Liberty" />
               </Link>
             </div>
             <div className="entry-text">

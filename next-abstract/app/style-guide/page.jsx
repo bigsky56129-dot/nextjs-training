@@ -1,4 +1,5 @@
 export default function StyleGuidePage() {
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ""
   return (
     <section id="content-wrap" className="style-guide">
       <div className="row narrow add-bottom text-center">
@@ -20,7 +21,7 @@ export default function StyleGuidePage() {
                 height="120"
                 className="pull-left"
                 alt="sample-image"
-                src="/images/sample-image.jpg"
+                src={`${prefix}/images/sample-image.jpg`}
               />
             </a>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque posuere nunc justo tempus leo.
@@ -167,7 +168,7 @@ export default function StyleGuidePage() {
         <div className="col-six tab-full">
           <h3>Responsive Image</h3>
           <p>
-            <img src="/images/shutterbug.jpg" alt="Shutterbug" />
+            <img src={`${prefix}/images/shutterbug.jpg`} alt="Shutterbug" />
           </p>
         </div>
         <div className="col-six tab-full">

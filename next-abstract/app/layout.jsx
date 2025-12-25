@@ -28,31 +28,7 @@ export default function RootLayout({ children }) {
         <Script src={`${prefix}/js/plugins.js`} strategy="afterInteractive" />
         <Script src={`${prefix}/js/jquery.appear.js`} strategy="afterInteractive" />
         <Script src={`${prefix}/js/main.js`} strategy="afterInteractive" />
-        {/* Rewrite root-leading asset links when served under a base path (GH Pages project sites) */}
-        <Script id="prefix-rewriter" strategy="afterInteractive">{
-          ` (function(){
-              var prefix = '${prefix}';
-              if(!prefix) return;
-              try {
-                document.querySelectorAll('[src^="/"]').forEach(function(el){
-                  var src = el.getAttribute('src');
-                  if (src && !src.startsWith(prefix)) el.setAttribute('src', prefix + src);
-                });
-                document.querySelectorAll('a[href^="/"]').forEach(function(el){
-                  var href = el.getAttribute('href');
-                  if (href && !href.startsWith(prefix)) el.setAttribute('href', prefix + href);
-                });
-                document.querySelectorAll('[style]').forEach(function(el){
-                  var s = el.getAttribute('style');
-                  if (s && s.indexOf('url(/') !== -1) {
-                    el.setAttribute('style', s.replace(/url\(\/(.*?)\)/g, 'url(' + prefix + '/$1)'));
-                  }
-                });
-              } catch(e) {
-                // ignore
-              }
-            })();`
-        }</Script>
+        {/* Prefix-rewriter removed; all assets use static base path */}
       </body>
     </html>
   )

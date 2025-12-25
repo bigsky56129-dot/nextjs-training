@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer>
@@ -16,11 +18,11 @@ export default function Footer() {
           <div className="col-two tab-1-3 mob-1-2 site-links">
             <h4>Site Links</h4>
             <ul>
-              <li><a href="/about/">About Us</a></li>
-              <li><a href="/">Blog</a></li>
-              <li><a href="/faq/">FAQ</a></li>
-              <li><a href="/terms/">Terms</a></li>
-              <li><a href="/privacy/">Privacy Policy</a></li>
+              <li><Link href="/about/">About Us</Link></li>
+              <li><Link href="/">Blog</Link></li>
+              <li><Link href="/faq/">FAQ</Link></li>
+              <li><Link href="/terms/">Terms</Link></li>
+              <li><Link href="/privacy/">Privacy Policy</Link></li>
             </ul>
           </div>
 
