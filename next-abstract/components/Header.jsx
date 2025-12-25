@@ -15,7 +15,8 @@ export default function Header() {
     logout();
     router.push("/login");
   };
-  const isClientsPage = pathname === "/admin/clients";
+  debugger
+  const isClientsPage = pathname.includes("/admin/clients");
   return (
     <header className="short-header">
       <div className="gradient-block"></div>
@@ -28,50 +29,51 @@ export default function Header() {
             <li className="current">
               <Link href="/" title="">Home</Link>
             </li>
-            {isClientsPage ? (
+            {isClientsPage && mounted && user ? (
               <li>
-                {mounted ? (user ? (
-                  <a href="#" onClick={handleLogout} title="Logout">Logout</a>
-                ) : null) : null}
+                <a href="#" onClick={handleLogout} title="Logout">Logout</a>
               </li>
-            ) : <>
-              <li className="has-children">
-                <Link href="/category/" title="">Categories</Link>
-                <ul className="sub-menu">
-                  <li><Link href="/category/">Wordpress</Link></li>
-                  <li><Link href="/category/">HTML</Link></li>
-                  <li><Link href="/category/">Photography</Link></li>
-                  <li><Link href="/category/">UI</Link></li>
-                  <li><Link href="/category/">Mockups</Link></li>
-                  <li><Link href="/category/">Branding</Link></li>
-                </ul>
-              </li>
-              <li className="has-children">
-                <Link href="/single-standard/" title="">Blog</Link>
-                <ul className="sub-menu">
-                  <li><Link href="/single-video/">Video Post</Link></li>
-                  <li><Link href="/single-audio/">Audio Post</Link></li>
-                  <li><Link href="/single-gallery/">Gallery Post</Link></li>
-                  <li><Link href="/single-standard/">Standard Post</Link></li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/style-guide/" title="">Styles</Link>
-              </li>
-              <li>
-                <Link href="/about/" title="">About</Link>
-              </li>
-              <li>
-                <Link href="/contact/" title="">Contact</Link>
-              </li>
-              <li>
-                {mounted ? (user ? (
-                  <a href="#" onClick={handleLogout} title="Logout">Logout</a>
-                ) : (
-                  <Link href="/login" title="">Login</Link>
-                )) : null}
-              </li>
-            </>}
+            ) : null}
+            {!isClientsPage && (
+              <>
+                <li className="has-children">
+                  <Link href="/category/" title="">Categories</Link>
+                  <ul className="sub-menu">
+                    <li><Link href="/category/">Wordpress</Link></li>
+                    <li><Link href="/category/">HTML</Link></li>
+                    <li><Link href="/category/">Photography</Link></li>
+                    <li><Link href="/category/">UI</Link></li>
+                    <li><Link href="/category/">Mockups</Link></li>
+                    <li><Link href="/category/">Branding</Link></li>
+                  </ul>
+                </li>
+                <li className="has-children">
+                  <Link href="/single-standard/" title="">Blog</Link>
+                  <ul className="sub-menu">
+                    <li><Link href="/single-video/">Video Post</Link></li>
+                    <li><Link href="/single-audio/">Audio Post</Link></li>
+                    <li><Link href="/single-gallery/">Gallery Post</Link></li>
+                    <li><Link href="/single-standard/">Standard Post</Link></li>
+                  </ul>
+                </li>
+                <li>
+                  <Link href="/style-guide/" title="">Styles</Link>
+                </li>
+                <li>
+                  <Link href="/about/" title="">About</Link>
+                </li>
+                <li>
+                  <Link href="/contact/" title="">Contact</Link>
+                </li>
+                <li>
+                  {mounted ? (user ? (
+                    <a href="#" onClick={handleLogout} title="Logout">Logout</a>
+                  ) : (
+                    <Link href="/login" title="">Login</Link>
+                  )) : null}
+                </li>
+              </>
+            )}
           </ul>
         </nav>
         {!isClientsPage && (
