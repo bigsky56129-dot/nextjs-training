@@ -10,7 +10,8 @@
     "export": "next build && next export",
     "test:paths": "node ./scripts/check-base-paths.mjs",
     "deploy": "npm run export && gh-pages -d out -b gh-pages --dotfiles",
-    "deploy:project": "npm run test:paths && cross-env NEXT_PUBLIC_BASE_PATH=/nextjs-training npm run export && gh-pages -d out -b gh-pages --dotfiles"
+    "deploy:project": "npm run test:paths && cross-env NEXT_PUBLIC_BASE_PATH=/nextjs-training npm run export && gh-pages -d out -b gh-pages --dotfiles",
+    "deploy:project:win": "npm run test:paths && set NEXT_PUBLIC_BASE_PATH=/nextjs-training&& npm run export && gh-pages -d out -b gh-pages --dotfiles"
   },
   "dependencies": {
     "next": "13.5.6",

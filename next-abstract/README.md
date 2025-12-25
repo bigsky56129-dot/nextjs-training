@@ -30,11 +30,22 @@ Push-Location "./next-abstract"; npm run build; npm run export; Pop-Location
 Static files output to `next-abstract/out/`.
 
 ## Deploy (GitHub Pages)
-For a project site (e.g. `/nextjs-training`), set the base path and deploy:
+
+### For a project site (e.g. `/nextjs-training`):
+#### On Windows (PowerShell or CMD):
 ```powershell
-Push-Location "./next-abstract"; $env:NEXT_PUBLIC_BASE_PATH="/nextjs-training"; npm run deploy; Pop-Location
+Push-Location "./next-abstract"
+npm run deploy:project:win
+Pop-Location
 ```
-If deploying to a user/org site root, omit the env var:
+#### On Mac/Linux:
+```sh
+cd ./next-abstract
+npm run deploy:project
+cd ..
+```
+
+### If deploying to a user/org site root, just run:
 ```powershell
 Push-Location "./next-abstract"; npm run deploy; Pop-Location
 ```
