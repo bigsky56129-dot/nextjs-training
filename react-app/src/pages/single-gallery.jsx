@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import CommentsList from '../components/comments-list'
+import CommentForm from '../components/comment-form'
 
 export default function SingleGallery() {
   useEffect(() => {
@@ -85,6 +87,14 @@ export default function SingleGallery() {
               </div>
             </div>
           </article>
+        </div>
+      </div>
+      <div className="comments-wrap">
+        <div id="comments" className="row">
+          <div className="col-full">
+            <CommentsList />
+            <CommentForm />
+          </div>
         </div>
       </div>
     </section>

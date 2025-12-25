@@ -1,3 +1,6 @@
+import CommentsList from '../components/comments-list'
+import CommentForm from '../components/comment-form'
+
 export default function SingleStandard() {
   return (
     <section id="content-wrap" className="blog-single">
@@ -39,6 +42,14 @@ export default function SingleStandard() {
               </div>
             </div>
           </article>
+        </div>
+      </div>
+      <div className="comments-wrap">
+        <div id="comments" className="row">
+          <div className="col-full">
+            <CommentsList />
+            <CommentForm />
+          </div>
         </div>
       </div>
     </section>
