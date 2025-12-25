@@ -21,9 +21,9 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/category" element={<Category />} />
         <Route path="/style-guide" element={<StyleGuide />} />
-        <Route path="/single/audio" element={<SingleAudio />} />
-        <Route path="/single/gallery" element={<SingleGallery />} />
-        <Route path="/single/video" element={<SingleVideo />} />
+        <Route path="/single-audio" element={<SingleAudio />} />
+        <Route path="/single-gallery" element={<SingleGallery />} />
+        <Route path="/single-video" element={<SingleVideo />} />
         <Route path="/single-standard" element={<SingleStandard />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

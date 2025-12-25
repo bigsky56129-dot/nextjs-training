@@ -113,7 +113,7 @@ export default function Category() {
             {/* Audio post */}
             <article className="brick entry format-audio animate-this">
               <div className="entry-thumb">
-                <a href="#/single/audio" className="thumb-link">
+                <a href="#/single-audio" className="thumb-link">
                   <img src={`${BASE}images/thumbs/concert.jpg`} alt="concert" />
                 </a>
                 <div className="audio-wrap">
@@ -128,7 +128,7 @@ export default function Category() {
                       <a href="#0">Music</a>
                     </span>
                   </div>
-                  <h1 className="entry-title"><a href="#/single/audio">This Is a Audio Format Post.</a></h1>
+                  <h1 className="entry-title"><a href="#/single-audio">This Is a Audio Format Post.</a></h1>
                 </div>
                 <div className="entry-excerpt">
                   Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -219,7 +219,7 @@ export default function Category() {
                       <a href="#0">Wordpress</a>
                     </span>
                   </div>
-                  <h1 className="entry-title"><a href="#/single/gallery">Workspace Design Trends and Ideas.</a></h1>
+                  <h1 className="entry-title"><a href="#/single-gallery">Workspace Design Trends and Ideas.</a></h1>
                 </div>
                 <div className="entry-excerpt">
                   Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -279,7 +279,7 @@ export default function Category() {
                       <a href="#0">Branding</a>
                     </span>
                   </div>
-                  <h1 className="entry-title"><a href="#/single/video">This Is a Video Post Format.</a></h1>
+                  <h1 className="entry-title"><a href="#/single-video">This Is a Video Post Format.</a></h1>
                 </div>
                 <div className="entry-excerpt">
                   Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.

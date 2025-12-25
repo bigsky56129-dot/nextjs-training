@@ -44,8 +44,8 @@ export default function SingleAudio() {
               </div>
 
               <div className="pagenav group">
-                <div className="prev"><a href="#/single/video"><span>Previous</span> Video Format Post</a></div>
-                <div className="next"><a href="#/single/gallery"><span>Next</span> Gallery Format Post</a></div>
+                <div className="prev"><a href="#/single-video"><span>Previous</span> Video Format Post</a></div>
+                <div className="next"><a href="#/single-gallery"><span>Next</span> Gallery Format Post</a></div>
               </div>
             </div>
           </article>

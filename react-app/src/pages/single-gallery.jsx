@@ -80,7 +80,7 @@ export default function SingleGallery() {
               </div>
 
               <div className="pagenav group">
-                <div className="prev"><a href="#/single/audio"><span>Previous</span> Audio Format Post</a></div>
+                <div className="prev"><a href="#/single-audio"><span>Previous</span> Audio Format Post</a></div>
                 <div className="next"><a href="#/single-standard"><span>Next</span> Standard Format Post</a></div>
               </div>
             </div>

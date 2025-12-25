@@ -181,7 +181,7 @@ export default function Home() {
                     <a href="#0">Photography</a>
                   </span>
                 </div>
-                <h1 className="entry-title"><a href="#/single/standard">Just a Standard Format Post.</a></h1>
+                <h1 className="entry-title"><a href="#/single-standard">Just a Standard Format Post.</a></h1>
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -204,7 +204,7 @@ export default function Home() {
                     <a href="#0">UI</a>
                   </span>
                 </div>
-                <h1 className="entry-title"><a href="#/single/standard">This Is Another Standard Format Post.</a></h1>
+                <h1 className="entry-title"><a href="#/single-standard">This Is Another Standard Format Post.</a></h1>
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -215,7 +215,7 @@ export default function Home() {
           {/* Audio post */}
           <article className="brick entry format-audio animate-this">
             <div className="entry-thumb">
-              <a href="#/single/audio" className="thumb-link">
+              <a href="#/single-audio" className="thumb-link">
                 <img src={`${BASE}images/thumbs/concert.jpg`} alt="concert" />
               </a>
               <div className="audio-wrap">
@@ -230,7 +230,7 @@ export default function Home() {
                     <a href="#0">Music</a>
                   </span>
                 </div>
-                <h1 className="entry-title"><a href="#/single/audio">This Is a Audio Format Post.</a></h1>
+                <h1 className="entry-title"><a href="#/single-audio">This Is a Audio Format Post.</a></h1>
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -265,7 +265,7 @@ export default function Home() {
                     <a href="#0">html</a>
                   </span>
                 </div>
-                <h1 className="entry-title"><a href="#/single/standard">Photography Skills Can Improve Your Graphic Design.</a></h1>
+                <h1 className="entry-title"><a href="#/single-standard">Photography Skills Can Improve Your Graphic Design.</a></h1>
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -288,7 +288,7 @@ export default function Home() {
                     <a href="#0">Mockup</a>
                   </span>
                 </div>
-                <h1 className="entry-title"><a href="#/single/standard">The 10 Golden Rules of Clean Simple Design.</a></h1>
+                <h1 className="entry-title"><a href="#/single-standard">The 10 Golden Rules of Clean Simple Design.</a></h1>
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -321,7 +321,7 @@ export default function Home() {
                     <a href="#0">Wordpress</a>
                   </span>
                 </div>
-                <h1 className="entry-title"><a href="#/single/gallery">Workspace Design Trends and Ideas.</a></h1>
+                <h1 className="entry-title"><a href="#/single-gallery">Workspace Design Trends and Ideas.</a></h1>
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -346,7 +346,7 @@ export default function Home() {
           {/* Pattern */}
           <article className="brick entry animate-this">
             <div className="entry-thumb">
-              <a href="#/single/standard" className="thumb-link">
+              <a href="#/single-standard" className="thumb-link">
                 <img src={`${BASE}images/thumbs/diagonal-pattern.jpg`} alt="Pattern" />
               </a>
             </div>
@@ -358,7 +358,7 @@ export default function Home() {
                     <a href="#0">UI</a>
                   </span>
                 </div>
-                <h1 className="entry-title"><a href="#/single/standard">You Can See Patterns Everywhere.</a></h1>
+                <h1 className="entry-title"><a href="#/single-standard">You Can See Patterns Everywhere.</a></h1>
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -381,7 +381,7 @@ export default function Home() {
                     <a href="#0">Branding</a>
                   </span>
                 </div>
-                <h1 className="entry-title"><a href="#/single/video">This Is a Video Post Format.</a></h1>
+                <h1 className="entry-title"><a href="#/single-video">This Is a Video Post Format.</a></h1>
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -392,7 +392,7 @@ export default function Home() {
           {/* Lighthouse */}
           <article className="brick entry animate-this">
             <div className="entry-thumb">
-              <a href="#/single/standard" className="thumb-link">
+              <a href="#/single-standard" className="thumb-link">
                 <img src={`${BASE}images/thumbs/lighthouse.jpg`} alt="Lighthouse" />
               </a>
             </div>
@@ -404,7 +404,7 @@ export default function Home() {
                     <a href="#0">Design</a>
                   </span>
                 </div>
-                <h1 className="entry-title"><a href="#/single/standard">Breathtaking Photos of Lighthouses.</a></h1>
+                <h1 className="entry-title"><a href="#/single-standard">Breathtaking Photos of Lighthouses.</a></h1>
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
@@ -415,7 +415,7 @@ export default function Home() {
           {/* Liberty */}
           <article className="brick entry animate-this">
             <div className="entry-thumb">
-              <a href="#/single/standard" className="thumb-link">
+              <a href="#/single-standard" className="thumb-link">
                 <img src={`${BASE}images/thumbs/liberty.jpg`} alt="Liberty" />
               </a>
             </div>
@@ -427,7 +427,7 @@ export default function Home() {
                     <a href="#0">html</a>
                   </span>
                 </div>
-                <h1 className="entry-title"><a href="#/single/standard">Designing With Black and White.</a></h1>
+                <h1 className="entry-title"><a href="#/single-standard">Designing With Black and White.</a></h1>
               </div>
               <div className="entry-excerpt">
                 Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.

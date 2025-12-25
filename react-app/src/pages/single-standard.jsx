@@ -34,8 +34,8 @@ export default function SingleStandard() {
               </div>
 
               <div className="pagenav group">
-                <div className="prev"><a href="#/single/gallery"><span>Previous</span> Gallery Format Post</a></div>
-                <div className="next"><a href="#/single/video"><span>Next</span> Video Format Post</a></div>
+                <div className="prev"><a href="#/single-gallery"><span>Previous</span> Gallery Format Post</a></div>
+                <div className="next"><a href="#/single-video"><span>Next</span> Video Format Post</a></div>
               </div>
             </div>
           </article>

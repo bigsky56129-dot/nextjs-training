@@ -20,9 +20,9 @@ export default function Header() {
               <NavLink to="/single-standard" title="">Blog</NavLink>
               <ul className="sub-menu">
                 <li><NavLink to="/single-standard">Standard</NavLink></li>
-                <li><NavLink to="/single/video">Video</NavLink></li>
-                <li><NavLink to="/single/audio">Audio</NavLink></li>
-                <li><NavLink to="/single/gallery">Gallery</NavLink></li>
+                <li><NavLink to="/single-video">Video</NavLink></li>
+                <li><NavLink to="/single-audio">Audio</NavLink></li>
+                <li><NavLink to="/single-gallery">Gallery</NavLink></li>
               </ul>
             </li>
             <li><NavLink to="/category">Category</NavLink></li>
