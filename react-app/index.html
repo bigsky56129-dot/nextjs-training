@@ -14,10 +14,11 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <!-- Optional: legacy plugin scripts (kept for visuals/animations) -->
+    <!-- Legacy scripts first to ensure plugin availability for React pages -->
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <!-- React entry after legacy libs -->
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
