@@ -1,7 +1,17 @@
-import Link from "next/link"
-import "./header.css"
+"use client";
+import Link from "next/link";
+import "./header.css";
+import { useAuth } from "../hooks/use-auth";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const { user, logout } = useAuth();
+  const router = useRouter();
+  const handleLogout = (e) => {
+    e.preventDefault();
+    logout();
+    router.push("/login");
+  };
   return (
     <header className="short-header">
       <div className="gradient-block"></div>
@@ -44,7 +54,11 @@ export default function Header() {
               <Link href="/contact/" title="">Contact</Link>
             </li>
             <li>
-              <Link href="/login" title="">Login</Link>
+              {user ? (
+                <a href="#" onClick={handleLogout} title="Logout">Logout</a>
+              ) : (
+                <Link href="/login" title="">Login</Link>
+              )}
             </li>
           </ul>
         </nav>
@@ -75,5 +89,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

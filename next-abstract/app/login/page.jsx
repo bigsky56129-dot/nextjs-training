@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault();
     const user = await login(username, password);
     if (user) {
-      router.push("/");
+      router.push("/clients");
     }
   };
 

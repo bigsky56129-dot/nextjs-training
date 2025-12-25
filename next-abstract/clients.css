@@ -1,0 +1,140 @@
+/* Simple KYC Client List Styles */
+.clients-bg {
+  min-height: 100vh;
+  background: #f7f9fb;
+  padding: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clients-header {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.clients-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222b45;
+}
+.clients-search {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #e3e8f0;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  background: #f6f8fa;
+  outline: none;
+  margin-bottom: 0.5rem;
+  transition: border 0.2s, background 0.2s;
+}
+.clients-search:focus {
+  border-color: #4f8cff;
+  background: #fff;
+}
+.clients-list {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(60, 72, 88, 0.08);
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.client-card {
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 1.2rem;
+  border-bottom: 1px solid #f0f2f7;
+  gap: 1.2rem;
+  background: transparent;
+}
+.client-card:last-child {
+  border-bottom: none;
+}
+.client-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e3e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-right: 0.7rem;
+}
+.client-info {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.client-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222b45;
+}
+.client-email {
+  font-size: 0.98rem;
+  color: #6b7a99;
+}
+.client-meta {
+  font-size: 0.93rem;
+  color: #8f9bb3;
+  display: flex;
+  gap: 1.2rem;
+}
+.client-role {
+  font-size: 0.97rem;
+  color: #888;
+  margin-right: 1.2rem;
+  min-width: 70px;
+  text-align: right;
+}
+.client-profile {
+  color: #3358e0;
+  font-size: 0.97rem;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  transition: color 0.2s;
+}
+.client-profile:hover {
+  color: #4f8cff;
+  text-decoration: underline;
+}
+.clients-loading, .clients-empty {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  padding: 2rem 0;
+}
+@media (max-width: 1000px) {
+  .clients-header, .clients-list {
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .clients-header, .clients-list {
+    padding: 0.5rem;
+  }
+  .client-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .client-role, .client-profile {
+    margin: 0;
+    min-width: unset;
+    text-align: left;
+  }
+}
