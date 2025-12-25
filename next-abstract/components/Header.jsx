@@ -34,6 +34,11 @@ export default function Header() {
                 <a href="#" onClick={handleLogout} title="Logout">Logout</a>
               </li>
             ) : null}
+            {isClientsPage && mounted && !user ? (
+              <li>
+                <Link href="/login" title="">Login</Link>
+              </li>
+            ) : null}
             {!isClientsPage && (
               <>
                 <li className="has-children">
@@ -66,11 +71,11 @@ export default function Header() {
                   <Link href="/contact/" title="">Contact</Link>
                 </li>
                 <li>
-                  {mounted ? (user ? (
+                  {mounted && user ? (
                     <a href="#" onClick={handleLogout} title="Logout">Logout</a>
                   ) : (
                     <Link href="/login" title="">Login</Link>
-                  )) : null}
+                  )}
                 </li>
               </>
             )}
